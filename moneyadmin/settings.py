@@ -27,7 +27,8 @@ DEBUG = config('DEBUG', default=True, cast=bool) #True
 
 ALLOWED_HOSTS = []
 
-
+# Custom model authentoication
+AUTH_USER_MODEL = 'auth.User' 
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+
+    # apps
+    'auth.apps.AuthConfig',
 ]
 
 MIDDLEWARE = [
